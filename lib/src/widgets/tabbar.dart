@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ttangkkeusmarket/screens/recommend.dart';
-import 'package:ttangkkeusmarket/screens/newitem.dart';
-import 'package:ttangkkeusmarket/screens/bestitem.dart';
-import 'package:ttangkkeusmarket/screens/discount.dart';
+import 'package:ttangkkeusmarket/src/screens/recommend.dart';
+import 'package:ttangkkeusmarket/src/screens/newitem.dart';
+import 'package:ttangkkeusmarket/src/screens/bestitem.dart';
+import 'package:ttangkkeusmarket/src/screens/discount.dart';
 
 class MainTabBar extends StatelessWidget {
   const MainTabBar({Key? key}) : super(key: key);

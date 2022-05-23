@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ttangkkeusmarket/widgets/carousel_list.dart';
-import 'package:ttangkkeusmarket/widgets/list_item.dart';
+import '../widgets/text/repetitious_text.dart';
+import 'package:ttangkkeusmarket/src/widgets/carousel_list.dart';
+import 'package:ttangkkeusmarket/src/widgets/list_item.dart';
 
 class RecommendTab extends StatelessWidget {
   const RecommendTab({Key? key}) : super(key: key);
@@ -10,12 +11,12 @@ class RecommendTab extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Expanded(
-            child: CarouselSliderWidget()
-          ),
-          Expanded(
-            child: ListItems()
-            ),
+          Expanded(child: CarouselSliderWidget()),
+          SizedBox(
+              // height: 100,
+              ),
+          RepetitiousText("도움이 필요한 상품"),
+          Expanded(child: ListItems()),
         ],
       ),
     );

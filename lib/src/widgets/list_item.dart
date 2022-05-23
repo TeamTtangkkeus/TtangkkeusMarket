@@ -5,11 +5,12 @@ class ListItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final currentWdith = MediaQuery.of(context).size.width;
+    final currentHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SizedBox(
         height: 170.0,
-        child: 
-        ListView.separated(
+        child: ListView.separated(
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.all(10),
           itemCount: 10,
@@ -21,7 +22,6 @@ class ListItems extends StatelessWidget {
           },
         ),
       ),
-      
     );
   }
 }

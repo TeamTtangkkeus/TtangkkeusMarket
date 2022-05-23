@@ -11,6 +11,9 @@ class CarouselSliderWidget extends StatefulWidget {
 class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
   @override
   Widget build(BuildContext context) {
+    final currentWidth = MediaQuery.of(context).size.width;
+    final currentHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: ListView(
         children: [
@@ -42,8 +45,7 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
 
               //3rd Image of Slider
               Container(
-                decoration: BoxDecoration(
-                    color: Colors.green
+                decoration: BoxDecoration(color: Colors.green
                     // image: DecorationImage(
                     //   image: NetworkImage("ADD IMAGE URL HERE"),
                     //   fit: BoxFit.cover,
@@ -65,18 +67,18 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
               //5th Image of Slider
               Container(
                 decoration: BoxDecoration(
-                    color: Colors.pink,
-                    // image: DecorationImage(
-                    //   image: NetworkImage("ADD IMAGE URL HERE"),
-                    //   fit: BoxFit.cover,
-                    ),
+                  color: Colors.pink,
+                  // image: DecorationImage(
+                  //   image: NetworkImage("ADD IMAGE URL HERE"),
+                  //   fit: BoxFit.cover,
+                ),
               ),
               // ),
             ],
 
             //Slider Container properties
             options: CarouselOptions(
-              height: 360.0,
+              height: currentHeight,
               // enlargeCenterPage: true,
               autoPlay: true,
               aspectRatio: 16 / 9,

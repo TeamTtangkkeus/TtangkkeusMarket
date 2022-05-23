@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 
-class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const BaseAppBar(
+class LoginAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const LoginAppBar(
       {Key? key, required this.appBar, required this.title, this.center = true})
       : super(key: key);
 
@@ -12,16 +13,14 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Color(0xffffffff),
+      backgroundColor: Colors.transparent,
       elevation: 0.0,
-      actions: [
-        IconButton(
-          onPressed: () => {
-            // do something
-          },
-          icon: Icon(Icons.shopping_cart_outlined, color: Colors.black),
-        )
-      ],
+      leading: IconButton(
+        icon: Icon(LineIcons.times),
+        iconSize: 32.0,
+        color: Colors.black,
+        onPressed: () => Navigator.of(context).pop(),
+      ),
       centerTitle: center,
       title: Text(
         "$title",
