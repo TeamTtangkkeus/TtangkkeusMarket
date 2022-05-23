@@ -29,6 +29,16 @@ class DefaultFirebaseOptions {
           'DefaultFirebaseOptions have not been configured for macos - '
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
+      case TargetPlatform.windows:
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
+      case TargetPlatform.linux:
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for linux - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       default:
         throw UnsupportedError(
           'DefaultFirebaseOptions are not supported for this platform.',
@@ -60,6 +70,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '42095887807',
     projectId: 'ttangkkeumarket-5adc8',
     storageBucket: 'ttangkkeumarket-5adc8.appspot.com',
+    androidClientId: '42095887807-5l9tq7q3oejnkclr9ctpgfvnuapd9baj.apps.googleusercontent.com',
     iosClientId: '42095887807-qra7ij0tbrobk5cin8cp4m3egvf5lm9b.apps.googleusercontent.com',
     iosBundleId: 'com.example.ttangkkeusmarket',
   );
